@@ -56,6 +56,7 @@ nav a {
   color: #000;
   font-weight: 600;
   position: relative;
+  padding: 8px 0;
 }
 
 nav a::after {
@@ -87,9 +88,16 @@ nav a:hover::after {
   transform: scale(1.05);
 }
 
+/* === Hamburger Icon === */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 /* === Hero Section === */
 .hero {
-  background-image: url('https://cdn2.dropmarkusercontent.com/52043/cd077fc3e263ed28a2c7d3d0e98cf1cdfa71a63c3b67d6d5b5e21b741e6aebb4/preview/Nepal_2022_CG-2081.jpg?Expires=1757358835&Signature=GShrIVrpz9wgABQdlqbqr62pbL3liSKAe~umM9qVeqaysFPio8CnCcg4Rn2dx9wb5eEdFLwXTdteD-tbp~gSSnHMJyKXTf-fz9DHxqAjjK0eFRywy9COai1JCrnOal6oylRxMwH9ckjhaI-vXQntXL3P5D4NcJykIJ2MH5FHdZHqD-GIe8zb3zZL4zGc59fZR9W6rLNr850TsfhVEEQXzI4NcqTgPy31Hi79TmFjSuW~030oDc3uG0c6R7851uzvxQu8YOoxFjW5Zz3IcyOWE3p7a~K8cD~g4vND4UE2B57T3JTJEsrTrQ9Cpi0sobLqnXBsRDK2WKNxbUT8OJRWSg__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ'); /* Replace with real image */
+  background-image: url('https://cdn2.dropmarkusercontent.com/52043/cd077fc3e263ed28a2c7d3d0e98cf1cdfa71a63c3b67d6d5b5e21b741e6aebb4/preview/Nepal_2022_CG-2081.jpg?Expires=1757358835&Signature=GShrIVrpz9wgABQdlqbqr62pbL3liSKAe~umM9qVeqaysFPio8CnCcg4Rn2dx9wb5eEdFLwXTdteD-tbp~gSSnHMJyKXTf-fz9DHxqAjjK0eFRywy9COai1JCrnOal6oylRxMwH9ckjhaI-vXQntXL3P5D4NcJykIJ2MH5FHdZHqD-GIe8zb3zZL4zGc59fZR9W6rLNr850TsfhVEEQXzI4NcqTgPy31Hi79TmFjSuW~030oDc3uG0c6R7851uzvxQu8YOoxFjW5Zz3IcyOWE3p7a~K8cD~g4vND4UE2B57T3JTJEsrTrQ9Cpi0sobLqnXBsRDK2WKNxbUT8OJRWSg__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -113,6 +121,7 @@ nav a:hover::after {
   color: white;
   max-width: 600px;
   animation: fadeInUp 1s ease-in-out;
+  padding: 0 20px;
 }
 
 .hero h1 {
@@ -176,11 +185,35 @@ nav a:hover::after {
     align-items: flex-start;
   }
 
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.open {
+    display: block;
+  }
+
   nav ul {
     flex-direction: column;
     width: 100%;
+    gap: 15px;
     margin-top: 10px;
     padding-left: 0;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .give-button {
+    margin-top: 10px;
+    align-self: flex-start;
   }
 
   .hero h1 {
